@@ -6,7 +6,12 @@ body {
 
 header, h1, h2, h3, h4, h5, h6 {
     font-family: 'Georgia', 'Times', 'Times New Roman', serif;
+    font-weight: bold;
 }
+h1 {
+    color: #4aaaa5;
+}
+/* nav */
 .navbar {
     padding: 0 50px;
     background: #ffffff;
@@ -16,6 +21,11 @@ header, h1, h2, h3, h4, h5, h6 {
     background: #4aaaa5;
     padding: 20px;
     color: white;
+}
+.navbar-brand h4 {
+    height: 100%;
+    line-height: 100%;
+    margin-bottom: 0;
 }
 
 .nav-link {
@@ -27,6 +37,7 @@ header, h1, h2, h3, h4, h5, h6 {
     border-right: none;
 }
 
+/* outer area */
 hr {
     /* how to change the thickness? */
     margin:0;
@@ -34,31 +45,26 @@ hr {
     color: #777777;
     /* height:2px; */
 }
-
 .background_1 {
     width: 100%;
     border: 1px solid #dddddd;
     background-image: url("../images/stripes-light.png");
 }
-
-h1 {
-    color: #4aaaa5;
-}
-
-/* about area */
-.background_1 .about_area {
+.background_1 .main_area {
     background: #ffffff;
-    height: 600px;
     width: 960px;
     margin: 20px auto;
     padding: 20px;
     text-align: left;
 }
-
-.background_1 .about_area h1{
+.main_area h1{
     padding-left: 25px;
+    text-align: left;
+    font-size: 1.5em;
 }
-.background_1 .about_area .profile_image {
+
+/* about area */
+.background_1 .main_area .profile_image {
     width: 300px;
     height: 300px;
     margin: 25px;
@@ -68,36 +74,16 @@ h1 {
     display: block;
     float: left;
 }
-
-.background_1 .about_area .about_me {
+.background_1 .main_area .about_me {
     margin: 25px;
 }
 
 /* contact area */
-.background_1 .contact_area {
-    background: #ffffff;
-    width: 960px;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: left;
-}
 .background_1 .contact_area form {
     padding: 20px 0;
 }
 
 /* portfolio area */
-.portfolio_area {
-    background: #ffffff;
-    width: 960px;
-    /* width: 500px; */
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
-}
-.portfolio_area h1 {
-    text-align: left;
-}
-
 .card_area {
     position: relative;
     display: inline-block;
@@ -155,4 +141,100 @@ footer {
     padding: 20px 0;
     background: #666666;
     color: #777777;
+}
+
+/* Use three `@media screen` tags, each with one of these `max-width`s: `980px`, `768px` and `640px`. */
+
+
+
+@media only screen and (max-width : 768px) {
+
+    /* outer settings */
+    .background_1 .main_area {
+        width: 95%;
+    }
+    .navbar {
+        padding: 0;
+        margin: 0;
+    }
+    .navbar-brand {
+        width: 40%;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        float:left;
+    }
+    #navbarSupportedContent {
+        display: inline-block;
+        float: left;
+    }
+    /* .navbar-nav {
+        width: 50%;
+        display:inline-block;
+        float: left;
+    }
+    .nav-item {
+        display: inline-block;
+    }
+    .nav-item .nav-link {
+        padding: 0 20px;
+        margin: 10px 0;
+        color: #777777;
+    } */
+
+    /* outer area */
+    .background_1 .main_area .profile_image {
+        width: 90%;
+    }
+    
+    /* portfolio area */
+    .portfolio_area {
+        text-align: center;
+    }
+}
+
+
+
+
+@media only screen and (max-width : 640px) {
+
+    /* outer settings */
+    .background_1 .main_area {
+        width: 95%;
+    }
+    .navbar {
+        padding: 0;
+        margin: 0;
+    }
+    .navbar-brand {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #navbarSupportedContent {
+        display: inline-block;
+        width: 640;
+    }
+    .navbar-nav {
+        width: 100%;
+        display:inline-block;
+    }
+    .nav-item {
+        display: inline-block;
+    }
+    .nav-item .nav-link {
+        padding: 0 20px;
+        margin: 10px 0;
+        color: #777777;
+    }
+
+    /* outer area */
+    .background_1 .main_area .profile_image {
+        width: 90%;
+    }
+    
+    /* portfolio area */
+    .portfolio_area {
+        text-align: center;
+    }
 }
