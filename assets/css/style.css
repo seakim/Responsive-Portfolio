@@ -19,12 +19,14 @@ header, h1, h2, h3, h4, h5, h6 {
 h1 {
     color: #4aaaa5;
     font-size: 1.5em;
+    padding: 15px 0;
 }
 .background_1 {
     width: 100%;
     padding: 20px;
     border: 1px solid #cccccc;
     background-image: url("../images/stripes-light.png");
+    min-height: 1150px;
 }
 .background_1 .main_area {
     background: #ffffff;
@@ -37,23 +39,22 @@ h1 {
 }
 
 /* footer area */
-/* footer changes the position with different resolution */
-.footer_line {
-    height: 7px;
-    background: #4aaaa5;
-
-    /* this gives space between the lines */
-    width: 100%;
-    display: inline-block;
-}
 footer {
     width: 100%;
     text-align: center;
-    height: 40px;
-    line-height: 40px;
+    height: 77px;
     background: #666666;
     color: #cccccc;
     font-size: 0.8em;
+}
+footer p {
+    height: 70px;
+    line-height: 70px;
+    margin: 0;
+}
+footer hr{
+    height: 7px;
+    background: #4aaaa5;
 }
 
 /* nav */
@@ -168,13 +169,10 @@ nav .nav-left {
     /* outer settings */
     .background_1 .main_area {
         width: 727.688px;
-        float: left;
-    }
-    .background_1 {
-        float: left;
     }
     .main_area #image-1 {
         width: 33.33%;
+        height: 250px;
     }
     /* portfolio area */
     .pf_thumbnail {
@@ -191,9 +189,6 @@ nav .nav-left {
     .background_1 .main_area {
         width: 100%;
     }
-    .nav-right {
-        margin-right: 0;
-    }
     /* about area */
     .main_area #image-1 {
         width: 50%;
@@ -201,21 +196,20 @@ nav .nav-left {
 }
 
 @media only screen and (max-width : 640px) {
-    nav {
-        text-align: center;      
-    }
+
     nav .nav-left{
         width: 100%;
         margin: 0;
     }
     .nav-right {
-        /* clear:both; does not work to cancel float:right */
         display: inline-block;
-        margin: 10px 0;
+        margin: 15px auto 5px;
+        float: none; 
     }
     /* about area */
     .main_area #image-1 {
         width: 100%;
+        height: 350px;
     }
     /* portfolio area */
     .pf_thumbnail {
